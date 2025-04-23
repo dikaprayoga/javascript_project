@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hitung Luas & Volume</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    label, input, button { display: block; margin: 10px 0; }
+    .hasil { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>Hitung Luas & Volume</h2>
+
+  <!-- Luas Persegi -->
+  <h3>Luas Persegi</h3>
+  <label>Sisi:</label>
+  <input type="number" id="sisiPersegi">
+  <button onclick="hitungLuasPersegi()">Hitung</button>
+  <div class="hasil" id="hasilPersegi"></div>
+
+  <!-- Luas Lingkaran -->
+  <h3>Luas Lingkaran</h3>
+  <label>Jari-jari:</label>
+  <input type="number" id="jariLingkaran">
+  <button onclick="hitungLuasLingkaran()">Hitung</button>
+  <div class="hasil" id="hasilLingkaran"></div>
+
+  <!-- Volume Kubus -->
+  <h3>Volume Kubus</h3>
+  <label>Sisi:</label>
+  <input type="number" id="sisiKubus">
+  <button onclick="hitungVolumeKubus()">Hitung</button>
+  <div class="hasil" id="hasilKubus"></div>
+
+  <!-- Volume Tabung -->
+  <h3>Volume Tabung</h3>
+  <label>Jari-jari:</label>
+  <input type="number" id="jariTabung">
+  <label>Tinggi:</label>
+  <input type="number" id="tinggiTabung">
+  <button onclick="hitungVolumeTabung()">Hitung</button>
+  <div class="hasil" id="hasilTabung"></div>
+
+  <script>
+    function hitungLuasPersegi() {
+      const sisi = parseFloat(document.getElementById("sisiPersegi").value);
+      const hasil = sisi * sisi;
+      document.getElementById("hasilPersegi").textContent = "Luas: " + hasil;
+    }
+
+    function hitungLuasLingkaran() {
+      const jari = parseFloat(document.getElementById("jariLingkaran").value);
+      const hasil = Math.PI * jari * jari;
+      document.getElementById("hasilLingkaran").textContent = "Luas: " + hasil.toFixed(2);
+    }
+
+    function hitungVolumeKubus() {
+      const sisi = parseFloat(document.getElementById("sisiKubus").value);
+      const hasil = sisi ** 3;
+      document.getElementById("hasilKubus").textContent = "Volume: " + hasil;
+    }
+
+    function hitungVolumeTabung() {
+      const jari = parseFloat(document.getElementById("jariTabung").value);
+      const tinggi = parseFloat(document.getElementById("tinggiTabung").value);
+      const hasil = Math.PI * jari * jari * tinggi;
+      document.getElementById("hasilTabung").textContent = "Volume: " + hasil.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Sederhana</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      text-align: center;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kalkulator Sederhana</h1>
+  <input type="number" id="angka1" placeholder="Angka pertama">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">−</option>
+    <option value="*">×</option>
+    <option value="/">÷</option>
+  </select>
+  <input type="number" id="angka2" placeholder="Angka kedua">
+  <br>
+  <button onclick="hitung()">Hitung</button>
+  <h2>Hasil: <span id="hasil">-</span></h2>
+
+  <script>
+    function hitung() {
+      const angka1 = parseFloat(document.getElementById('angka1').value);
+      const angka2 = parseFloat(document.getElementById('angka2').value);
+      const operator = document.getElementById('operator').value;
+      let hasil;
+
+      if (isNaN(angka1) || isNaN(angka2)) {
+        hasil = 'Masukkan angka yang valid';
+      } else {
+        switch (operator) {
+          case '+':
+            hasil = angka1 + angka2;
+            break;
+          case '-':
+            hasil = angka1 - angka2;
+            break;
+          case '*':
+            hasil = angka1 * angka2;
+            break;
+          case '/':
+            hasil = angka2 !== 0 ? angka1 / angka2 : 'Tidak bisa dibagi 0';
+            break;
+        }
+      }
+
+      document.getElementById('hasil').textContent = hasil;
+    }
+  </script>
+</body>
+</html>
