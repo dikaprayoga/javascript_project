@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bernadya - Logika</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      width: 200px;
+      border-radius: 50%;
+    }
+    pre {
+      white-space: pre-wrap;
+      line-height: 1.6;
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 5px;
+      display: none;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    audio {
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Lagu: Logika</h1>
+    <h2>Bernadya</h2>
+    <img src="https://i.scdn.co/image/ab6761610000e5ebbe53717dca077c80139536a6" alt="Bernadya" />
+    
+    <button onclick="toggleLyrics()">Tampilkan/Sembunyikan Lirik</button>
+    
+    <pre id="lyrics">
+Aku tau kamu bisa
+Mencintai tanpa logika
+Tapi bukan berarti aku
+Yang harus mengalah
+
+Sudah cukup aku saja
+Yang berjuang sepenuh jiwa
+Bila kamu pun merasa
+Harusnya kau bertahan
+
+[Reff:]
+Mencintai itu bukan tentang siapa yang hebat bertahan
+Tapi tentang saling menjaga, saling percaya
+Jika memang kamu cinta
+Takkan pergi sesuka hati
+Tolong logikakan hati
+Sebelum kau sakiti lagi
+    </pre>
+
+    <audio controls>
+      <source src="lagu-logika.mp3" type="audio/mpeg" />
+      Browser kamu tidak mendukung pemutar audio.
+    </audio>
+  </div>
+
+  <script src="lagu.js"></script>
+</body>
+</html>
+
